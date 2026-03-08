@@ -1,0 +1,26 @@
+[
+  {
+    "id": "u001",
+    "email": "intern1@amdocs.com",
+    "name": "John Doe",
+    "role": "intern",
+    "teamId": "team-billing",
+    "firstLogin": true
+  },
+  {
+    "id": "u002",
+    "email": "intern2@amdocs.com",
+    "name": "Maria Santos",
+    "role": "intern",
+    "teamId": "team-billing",
+    "firstLogin": false
+  },
+  {
+    "id": "m001",
+    "email": "manager1@amdocs.com",
+    "name": "Sarah Johnson",
+    "role": "manager",
+    "teamId": "team-billing",
+    "firstLogin": false
+  }
+]

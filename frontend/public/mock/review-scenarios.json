@@ -1,0 +1,48 @@
+[
+  {
+    "id": "approved",
+    "status": "approved",
+    "match": {
+      "includesAll": ["BillingDBConnector", "try", "catch"],
+      "excludes": ["DriverManager"]
+    },
+    "feedback": "Excellent update. You aligned with team standards by using BillingDBConnector and proper error handling.",
+    "hints": []
+  },
+  {
+    "id": "wrong-jdbc",
+    "status": "changes_requested",
+    "match": {
+      "includesAny": ["DriverManager", "jdbc:"]
+    },
+    "feedback": "The code works, but this team does not use raw JDBC in service modules.",
+    "hints": [
+      "Switch to BillingDBConnector",
+      "Check internal standards for DB access layer"
+    ]
+  },
+  {
+    "id": "missing-error-handling",
+    "status": "changes_requested",
+    "match": {
+      "includesAny": ["BillingDBConnector"],
+      "excludes": ["try", "catch"]
+    },
+    "feedback": "Good start with BillingDBConnector, but error handling is missing for failure paths.",
+    "hints": [
+      "Wrap initialization in try/catch",
+      "Return a meaningful error status"
+    ]
+  },
+  {
+    "id": "default-revision",
+    "status": "changes_requested",
+    "match": {},
+    "feedback": "Your submission is incomplete for this task's acceptance criteria.",
+    "hints": [
+      "Use BillingDBConnector",
+      "Add try/catch",
+      "Avoid DriverManager"
+    ]
+  }
+]

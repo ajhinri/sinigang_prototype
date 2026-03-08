@@ -1,0 +1,215 @@
+[
+  {
+    "focusArea": "Backend Engineering",
+    "repoFiles": {
+      "README.md": "# DayZero Backend Sandbox\n\nFocus: Backend Engineering\n\nThis repository simulates team workflows for backend onboarding tasks.\n",
+      "src/services/BillingService.java": "public class BillingService {\n  public String health() {\n    return \"OK\";\n  }\n}\n",
+      "src/config/application.properties": "billing.db.url=jdbc:billing://localhost\nbilling.db.user=intern\n"
+    },
+    "tasks": [
+      {
+        "taskId": "be-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Configure Billing Database Connection",
+        "description": "Set up BillingDBConnector and validate connection response handling.",
+        "acceptanceCriteria": [
+          "Uses BillingDBConnector",
+          "Has try/catch handling",
+          "Avoids DriverManager",
+          "Returns clear status"
+        ],
+        "starterFile": "src/services/DatabaseConfig.java",
+        "starterCode": "public class DatabaseConfig {\n  public static String initialize() {\n    // TODO: connect to billing DB and return status\n    return \"Not connected\";\n  }\n}\n",
+        "hints": [
+          "Use BillingDBConnector",
+          "Wrap DB call in try/catch",
+          "Avoid DriverManager"
+        ]
+      },
+      {
+        "taskId": "be-d2",
+        "day": 2,
+        "week": 1,
+        "title": "Implement Validation and Logging",
+        "description": "Add structured logging and input validation in billing service methods.",
+        "acceptanceCriteria": [
+          "Input validation implemented",
+          "Structured logs present",
+          "Error path tested"
+        ],
+        "starterFile": "src/services/BillingService.java",
+        "starterCode": "public class BillingService {\n  public String process(String accountId) {\n    return \"TODO\";\n  }\n}\n",
+        "hints": [
+          "Validate accountId",
+          "Log start and failure events",
+          "Return meaningful error message"
+        ]
+      }
+    ]
+  },
+  {
+    "focusArea": "Frontend Development",
+    "repoFiles": {
+      "README.md": "# DayZero Frontend Sandbox\n\nFocus: Frontend Development\n\nThis repository simulates component and UI workflow tasks.\n",
+      "src/components/DashboardCard.jsx": "export default function DashboardCard({ title, value }) {\n  return (\n    <article>\n      <h3>{title}</h3>\n      <p>{value}</p>\n    </article>\n  )\n}\n",
+      "src/styles/tokens.css": ":root {\n  --brand-primary: #fb923c;\n  --brand-secondary: #ec4899;\n}\n"
+    },
+    "tasks": [
+      {
+        "taskId": "fe-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Build Reusable Task Card",
+        "description": "Create a reusable task card component with status states and CTA button.",
+        "acceptanceCriteria": [
+          "Task card component created",
+          "Supports status variants",
+          "Has accessible button label"
+        ],
+        "starterFile": "src/components/TaskCard.jsx",
+        "starterCode": "export default function TaskCard() {\n  return <div>TODO</div>\n}\n",
+        "hints": [
+          "Use props for title and status",
+          "Expose onClick handler",
+          "Include hover and focus states"
+        ]
+      },
+      {
+        "taskId": "fe-d2",
+        "day": 2,
+        "week": 1,
+        "title": "Wire Dashboard Data State",
+        "description": "Connect task data to dashboard cards and render today/weekly sections.",
+        "acceptanceCriteria": [
+          "Today task shown",
+          "Weekly list rendered",
+          "Handles empty state"
+        ],
+        "starterFile": "src/pages/Dashboard.jsx",
+        "starterCode": "export default function Dashboard() {\n  return <main>TODO</main>\n}\n",
+        "hints": [
+          "Split today and weekly arrays",
+          "Show fallback text if empty",
+          "Keep rendering deterministic"
+        ]
+      }
+    ]
+  },
+  {
+    "focusArea": "DevOps / CI/CD",
+    "repoFiles": {
+      "README.md": "# DayZero DevOps Sandbox\n\nFocus: DevOps / CI/CD\n\nThis repository simulates pipeline and deployment workflow tasks.\n",
+      ".github/workflows/build.yml": "name: Build\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n",
+      "Dockerfile": "FROM node:20-alpine\nWORKDIR /app\nCOPY . .\nRUN npm ci\nCMD [\"npm\",\"run\",\"start\"]\n"
+    },
+    "tasks": [
+      {
+        "taskId": "do-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Add Lint Stage to Pipeline",
+        "description": "Update the pipeline mock to run lint before build.",
+        "acceptanceCriteria": [
+          "Lint step exists",
+          "Pipeline order is lint then build",
+          "README updated"
+        ],
+        "starterFile": ".github/workflows/build.yml",
+        "starterCode": "name: Build\non: [push]\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm run build\n",
+        "hints": [
+          "Add npm run lint",
+          "Keep lint before build",
+          "Document change in README"
+        ]
+      }
+    ]
+  },
+  {
+    "focusArea": "Cloud Infrastructure",
+    "repoFiles": {
+      "README.md": "# DayZero Cloud Sandbox\n\nFocus: Cloud Infrastructure\n\nThis repository simulates infrastructure and deployment tasks.\n",
+      "infra/main.tf": "resource \"aws_s3_bucket\" \"training_logs\" {\n  bucket = \"dayzero-training-logs\"\n}\n",
+      "docs/runbook.md": "# Deployment Runbook\n\n1. Validate variables\n2. Plan\n3. Apply\n"
+    },
+    "tasks": [
+      {
+        "taskId": "cl-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Create Environment Provision Checklist",
+        "description": "Document and validate required cloud resources before deployment.",
+        "acceptanceCriteria": [
+          "Checklist includes network and secrets",
+          "Runbook updated",
+          "Validation steps are clear"
+        ],
+        "starterFile": "docs/runbook.md",
+        "starterCode": "# Deployment Runbook\n\n## TODO\n- Add environment checklist\n",
+        "hints": [
+          "Include networking and IAM",
+          "Define pre-deploy checks",
+          "Add rollback note"
+        ]
+      }
+    ]
+  },
+  {
+    "focusArea": "Data Engineering",
+    "repoFiles": {
+      "README.md": "# DayZero Data Sandbox\n\nFocus: Data Engineering\n\nThis repository simulates ingestion and transformation tasks.\n",
+      "pipelines/transform.py": "def transform(rows):\n    # TODO: transform incoming rows\n    return rows\n",
+      "schemas/customer.json": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"id\": {\"type\": \"string\"}\n  }\n}\n"
+    },
+    "tasks": [
+      {
+        "taskId": "de-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Implement Data Validation Stage",
+        "description": "Add schema validation before transformation execution.",
+        "acceptanceCriteria": [
+          "Validation step runs first",
+          "Invalid rows are handled",
+          "Errors are logged"
+        ],
+        "starterFile": "pipelines/transform.py",
+        "starterCode": "def transform(rows):\n    return rows\n",
+        "hints": [
+          "Validate input schema",
+          "Separate invalid records",
+          "Log failure summary"
+        ]
+      }
+    ]
+  },
+  {
+    "focusArea": "Artificial Intelligence / Machine Learning",
+    "repoFiles": {
+      "README.md": "# DayZero AI/ML Sandbox\n\nFocus: Artificial Intelligence / Machine Learning\n\nThis repository simulates model training and evaluation tasks.\n",
+      "ml/train.py": "def train(dataset):\n    # TODO: train baseline model\n    return {\"accuracy\": 0.0}\n",
+      "ml/metrics.md": "# Metrics\n\n- Accuracy: TBD\n- Recall: TBD\n"
+    },
+    "tasks": [
+      {
+        "taskId": "ml-d1",
+        "day": 1,
+        "week": 1,
+        "title": "Add Baseline Evaluation Output",
+        "description": "Update training script to output baseline metrics and save report.",
+        "acceptanceCriteria": [
+          "Metrics are returned from train()",
+          "Metrics report updated",
+          "Handles empty dataset"
+        ],
+        "starterFile": "ml/train.py",
+        "starterCode": "def train(dataset):\n    return {\"accuracy\": 0.0}\n",
+        "hints": [
+          "Check for empty dataset",
+          "Return at least accuracy and recall",
+          "Update metrics documentation"
+        ]
+      }
+    ]
+  }
+]

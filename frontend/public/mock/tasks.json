@@ -1,0 +1,20 @@
+[
+  {
+    "taskId": "t001",
+    "title": "Configure Billing Database Connection",
+    "description": "Set up a database connection using BillingDBConnector instead of raw JDBC. Include error handling and close the connection safely.",
+    "acceptanceCriteria": [
+      "Uses BillingDBConnector class",
+      "Includes try/catch error handling",
+      "Avoids direct DriverManager connection",
+      "Returns connection status message"
+    ],
+    "starterFile": "DatabaseConfig.java",
+    "starterCode": "public class DatabaseConfig {\n  public static String initialize() {\n    // TODO: connect to billing DB and return status\n    return \"Not connected\";\n  }\n}\n",
+    "hints": [
+      "Import com.amdocs.billing.BillingDBConnector",
+      "Use try/catch to handle failures",
+      "Avoid DriverManager for this team"
+    ]
+  }
+]

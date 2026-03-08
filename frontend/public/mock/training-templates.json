@@ -1,0 +1,110 @@
+[
+  {
+    "id": "plan-backend-core",
+    "focusArea": "Backend Engineering",
+    "week1": [
+      "Set up service skeleton and local environment",
+      "Configure database connection and data model",
+      "Implement basic API endpoint with error handling",
+      "Integrate with internal billing API simulation",
+      "Add structured logging and validation"
+    ],
+    "week2": [
+      "Implement Jira-like feature ticket A",
+      "Refactor for reusable service utilities",
+      "Write unit tests for core flows",
+      "Add CI checks simulation",
+      "Run final integration and QA review"
+    ]
+  },
+  {
+    "id": "plan-frontend-core",
+    "focusArea": "Frontend Development",
+    "week1": [
+      "Set up routes and shared layout",
+      "Build component library primitives",
+      "Implement form validation patterns",
+      "Connect UI to mock JSON services",
+      "Add loading and empty states"
+    ],
+    "week2": [
+      "Build feature from simulated Jira story",
+      "Improve state management and UX polish",
+      "Write component tests",
+      "Optimize performance and accessibility",
+      "Demo integration and final review"
+    ]
+  },
+  {
+    "id": "plan-devops-core",
+    "focusArea": "DevOps / CI/CD",
+    "week1": [
+      "Set up build pipeline template",
+      "Configure linting and quality gates",
+      "Containerize local service",
+      "Create deployment config mock",
+      "Document environment setup"
+    ],
+    "week2": [
+      "Implement pipeline for feature release",
+      "Add rollback and monitoring checks",
+      "Write deployment validation scripts",
+      "Run staging simulation",
+      "Publish readiness summary"
+    ]
+  },
+  {
+    "id": "plan-cloud-core",
+    "focusArea": "Cloud Infrastructure",
+    "week1": [
+      "Set up cloud environment simulation",
+      "Configure service secrets and networking",
+      "Provision infrastructure template",
+      "Add observability baseline",
+      "Document deployment checklist"
+    ],
+    "week2": [
+      "Implement ticket for environment scaling",
+      "Harden cloud config and policies",
+      "Validate failover flow",
+      "Run staged deployment simulation",
+      "Publish handoff notes"
+    ]
+  },
+  {
+    "id": "plan-data-core",
+    "focusArea": "Data Engineering",
+    "week1": [
+      "Set up data ingestion pipeline skeleton",
+      "Create schema and validation checks",
+      "Implement transform job",
+      "Store outputs in mock warehouse",
+      "Add data quality logging"
+    ],
+    "week2": [
+      "Implement ticket for incremental load",
+      "Optimize transformation steps",
+      "Add pipeline error recovery",
+      "Build data quality dashboard",
+      "Run end-to-end validation"
+    ]
+  },
+  {
+    "id": "plan-aiml-core",
+    "focusArea": "Artificial Intelligence / Machine Learning",
+    "week1": [
+      "Set up feature dataset and baseline model",
+      "Implement training script",
+      "Track evaluation metrics",
+      "Add inference endpoint mock",
+      "Document model assumptions"
+    ],
+    "week2": [
+      "Implement ticket for model improvement",
+      "Tune hyperparameters and compare runs",
+      "Add validation and drift checks",
+      "Package model for deployment",
+      "Publish experiment summary"
+    ]
+  }
+]
